@@ -5,7 +5,12 @@ set expandtab
 syntax on
 colorscheme phd 
 set number
-let g:NERDTreeWinSize = 55
-autocmd VimEnter * NERDTree
-autocmd VimEnter * rightbelow new
-autocmd VimEnter * ConqueTerm bash
+let g:NERDTreeWinSize = 70
+
+function Dev()
+	:NERDTree
+	:belowright new
+	:ConqueTerm bash
+endfunction
+
+:map <F2> :exec Dev()<cr> <esc>
