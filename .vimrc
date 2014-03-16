@@ -16,7 +16,7 @@ highlight iCursor guibg=steelblue
 "set guicursor+=i:ver100-iCursor
 "set guicursor+=n-v-c:blinkon0
 "set guicursor+=i:blinkwait10
-
+"http://vim.wikia.com/wiki/Configuring_the_cursor
 
 "clang_complete settings
 let g:clang_use_library=1
