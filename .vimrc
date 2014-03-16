@@ -8,6 +8,15 @@ set number
 let g:NERDTreeWinSize = 70
 set nocompatible
 
+highlight Cursor guibg=steelblue
+highlight iCursor guibg=steelblue
+"highlight Cursor guifg=white guibg=black
+"highlight iCursor guifg=white guibg=steelblue
+"set guicursor=n-v-c:block-Cursor
+"set guicursor+=i:ver100-iCursor
+"set guicursor+=n-v-c:blinkon0
+"set guicursor+=i:blinkwait10
+
 
 "clang_complete settings
 let g:clang_use_library=1
