@@ -8,10 +8,28 @@ set number
 let g:NERDTreeWinSize = 70
 set nocompatible
 
+filetype off
+
+"Start of Vundle config
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'klen/python-mode'
+Plugin 'wting/rust.vim'
+Plugin 'ervandew/supertab'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'scrooloose/nerdtree'
+Plugin 'nicoraffo/conque'
+Plugin 'vim-scripts/awk.vim'
+
+call vundle#end()
+filetype plugin indent on
+"End of Vundle config
+
 highlight Cursor guibg=steelblue
 highlight iCursor guibg=steelblue
 "highlight Cursor guifg=white guibg=black
-"highlight iCursor guifg=white guibg=steelblue
+highlight iCursor guifg=white guibg=steelblue
 "set guicursor=n-v-c:block-Cursor
 "set guicursor+=i:ver100-iCursor
 "set guicursor+=n-v-c:blinkon0
@@ -25,11 +43,6 @@ let g:clang_auto_select = 1
 let g:clang_complete_auto = 0
 let g:clang_complete_copen = 1
 let g:clang_sort_algo = "none"
-
-"jedi settings
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
-"let g:jedi#completions_command = "<tab>"
 
 let g:SuperTabDefaultCompletionType = "context"
 "let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
