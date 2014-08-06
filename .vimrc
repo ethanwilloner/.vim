@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'nicoraffo/conque'
 Plugin 'vim-scripts/awk.vim'
+Plugin 'Lokaltog/powerline'
 
 call vundle#end()
 filetype plugin indent on
