@@ -13,11 +13,12 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'wting/rust.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'nicoraffo/conque'
 Plugin 'vim-scripts/awk.vim'
 
@@ -43,6 +44,11 @@ let g:clang_complete_auto = 0
 let g:clang_complete_copen = 1
 let g:clang_sort_algo = "none"
 
+-"jedi settings
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 0
+"let g:jedi#completions_command = "<tab>"
+
 let g:SuperTabDefaultCompletionType = "context"
 "let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 let g:SuperTabLongestHighlight = 0
@@ -63,6 +69,12 @@ endfunction
 " Colemak Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "noremap <esc> <alt>
+noremap n gj
+noremap e gk
+noremap i l
+noremap gn j
+noremap ge k
+
 
 noremap a i
 noremap A I
@@ -108,5 +120,3 @@ nnoremap <c-h> <C-PageUp>
 
 nnoremap o :
 nnoremap l u
-
-
