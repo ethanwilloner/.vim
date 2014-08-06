@@ -8,7 +8,6 @@ set number
 let g:NERDTreeWinSize = 70
 set nocompatible
 
-
 "Start of Vundle config
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -68,7 +67,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colemak Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"noremap <esc> <alt>
+noremap <esc> <alt>
 noremap n gj
 noremap e gk
 noremap i l
