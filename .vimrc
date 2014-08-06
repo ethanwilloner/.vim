@@ -8,12 +8,11 @@ set number
 let g:NERDTreeWinSize = 70
 set nocompatible
 
-filetype off
 
 "Start of Vundle config
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'klen/python-mode'
 Plugin 'wting/rust.vim'
 Plugin 'ervandew/supertab'
@@ -63,38 +62,51 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colemak Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  noremap <esc> <alt>
+"noremap <esc> <alt>
 
-" hnei = arrows
-  noremap n gj|noremap e gk|noremap i l|noremap gn j|noremap ge k
-
-" s/S = inSert
-" noremap s i|noremap S I
-  noremap a i|noremap A I
-  noremap s a|noremap S A
+noremap a i
+noremap A I
+noremap s a
+noremap S A
 
 " k/K = last search
-  noremap k n|noremap K N
+noremap k n
+noremap K N
 
 " l/L = BOL / EOL | <c-l> = join lines
-  noremap l ^|noremap L $|noremap <C-l> J
+noremap l ^
+noremap L $
+noremap <C-l> J
 
 " j/J = end of word
-  noremap j e|noremap J E
-
-" _r_ = inneR text objects
-  onoremap r i
+noremap j e
+noremap J E
 
 " c-e/c-n/c-m or <cr> = High/Low/Mid
-  noremap <c-e> H|noremap <c-n> L|noremap <c-m> M
+noremap <c-e> H
+noremap <c-n> L
+noremap <c-m> M
 
 " shift+direction switches split panes
-  noremap H <C-W>h|noremap I <C-W>l|noremap N <C-W>j|noremap E <C-W>k
-
-" c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
-  nnoremap <c-i> <C-PageDown>|nnoremap <c-h> <C-PageUp>
+noremap H <C-W>h
+noremap I <C-W>l
+noremap N <C-W>j
+noremap E <C-W>k
 
 " U = Redo with U
-  noremap U <C-r>
+noremap U <C-r>
 
-  noremap o ;|noremap O :
+noremap o ;
+noremap O :
+
+" _r_ = inneR text objects
+onoremap r i
+
+" c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
+nnoremap <c-i> <C-PageDown>
+nnoremap <c-h> <C-PageUp>
+
+nnoremap o :
+nnoremap l u
+
+
