@@ -1,2 +1,6 @@
+*
 *.swp
 .VimballRecord
+!.vimrc
+!bundle/Vundle.vim
+!colors/
