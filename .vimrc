@@ -20,8 +20,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'nicoraffo/conque'
 Plugin 'vim-scripts/awk.vim'
-Plugin 'Lokaltog/powerline'
+"Plugin 'Lokaltog/powerline'
 Plugin 'SirVer/ultisnips'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'junegunn/vim-plug'
 
 call vundle#end()
 filetype plugin indent on
