@@ -123,3 +123,6 @@ nnoremap <c-h> <C-PageUp>
 
 nnoremap o :
 nnoremap l u
+
+" this nerdtree mapping interferes with movement
+let g:NERDTreeMapOpenExpl = "j"
