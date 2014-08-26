@@ -24,6 +24,7 @@ Plugin 'vim-scripts/awk.vim'
 Plugin 'SirVer/ultisnips'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'junegunn/vim-plug'
+Plugin 'rhysd/vim-clang-format'
 
 call vundle#end()
 filetype plugin indent on
