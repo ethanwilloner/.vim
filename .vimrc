@@ -20,7 +20,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'nicoraffo/conque'
 Plugin 'vim-scripts/awk.vim'
-Plugin 'Lokaltog/powerline'
+"Plugin 'Lokaltog/powerline'
+Plugin 'SirVer/ultisnips'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'junegunn/vim-plug'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -120,3 +125,9 @@ nnoremap <c-h> <C-PageUp>
 
 nnoremap o :
 nnoremap l u
+<<<<<<< HEAD
+=======
+
+" this nerdtree mapping interferes with movement
+let g:NERDTreeMapOpenExpl = "j"
+>>>>>>> 03ae985d21b4e6676ede2cdb79114de1e35c7f8b
