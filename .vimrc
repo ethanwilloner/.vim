@@ -6,6 +6,7 @@ syntax on
 colorscheme wombat
 set number
 let g:NERDTreeWinSize = 70
+set shell=/bin/bash
 set nocompatible
 
 "Start of Vundle config
