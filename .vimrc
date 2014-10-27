@@ -6,7 +6,6 @@ syntax on
 colorscheme wombat
 set number
 let g:NERDTreeWinSize = 70
-set shell=/bin/bash
 set nocompatible
 
 "Start of Vundle config
@@ -66,11 +65,16 @@ set completeopt=menuone,menu,longest,preview
 function Dev()
 	:NERDTree
 	:belowright new
-	:ConqueTerm bash
+	:ConqueTerm fish
+endfunction
+
+function Term()
+	:belowright new
+	:ConqueTerm fish
 endfunction
 
 :map <F2> :exec Dev()<cr> <esc>
-
+:map <F3> :exec Term()<cr> <esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colemak Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
