@@ -7,6 +7,7 @@ colorscheme wombat
 set number
 let g:NERDTreeWinSize = 70
 set nocompatible
+set shell=bash
 
 "Start of Vundle config
 filetype off
