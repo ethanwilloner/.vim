@@ -66,12 +66,12 @@ set completeopt=menuone,menu,longest,preview
 function Dev()
 	:NERDTree
 	:belowright new
-	:ConqueTerm fish
+	:ConqueTerm bash
 endfunction
 
 function Term()
 	:belowright new
-	:ConqueTerm fish
+	:ConqueTerm bash
 endfunction
 
 :map <F2> :exec Dev()<cr> <esc>
