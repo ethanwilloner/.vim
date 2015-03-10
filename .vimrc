@@ -14,11 +14,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'nicoraffo/conque'
 Plug 'vim-scripts/awk.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
 Plug 'rust-lang/rust.vim'
 Plug 'flazz/vim-colorschemes'
 call plug#end()
-filetype plugin indent on
 
 "http://vim.wikia.com/wiki/Configuring_the_cursor
 highlight Cursor guibg=steelblue
@@ -27,7 +26,7 @@ highlight iCursor guifg=white guibg=steelblue
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
-set completeopt=menuone,menu,longest,preview
+"set completeopt=menuone,menu,longest,preview
 
 function Dev()
 	:NERDTree
