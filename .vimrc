@@ -9,57 +9,23 @@ let g:NERDTreeWinSize = 70
 set nocompatible
 set shell=bash
 
-"Start of Vundle config
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'davidhalter/jedi-vim'
-Plugin 'wting/rust.vim'
-Plugin 'ervandew/supertab'
-Plugin 'Rip-Rip/clang_complete'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'nicoraffo/conque'
-Plugin 'vim-scripts/awk.vim'
-"Plugin 'Lokaltog/powerline'
-Plugin 'SirVer/ultisnips'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'junegunn/vim-plug'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'fatih/vim-go'
-
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'nicoraffo/conque'
+Plug 'vim-scripts/awk.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'rust-lang/rust.vim'
+Plug 'flazz/vim-colorschemes'
+call plug#end()
 filetype plugin indent on
-"End of Vundle config
 
+"http://vim.wikia.com/wiki/Configuring_the_cursor
 highlight Cursor guibg=steelblue
 highlight iCursor guibg=steelblue
-"highlight Cursor guifg=white guibg=black
 highlight iCursor guifg=white guibg=steelblue
-"set guicursor=n-v-c:block-Cursor
-"set guicursor+=i:ver100-iCursor
-"set guicursor+=n-v-c:blinkon0
-"set guicursor+=i:blinkwait10
-"http://vim.wikia.com/wiki/Configuring_the_cursor
 
-"clang_complete settings
-let g:clang_use_library=1
-let g:clang_library_path = '/usr/lib/llvm-3.5/lib/'
-let g:clang_auto_select = 1
-let g:clang_complete_auto = 0
-let g:clang_complete_copen = 1
-let g:clang_sort_algo = "none"
-
--"jedi settings
-let g:jedi#popup_on_dot = 1
-let g:jedi#popup_select_first = 0
-"let g:jedi#completions_command = "<tab>"
-
-let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-let g:SuperTabLongestHighlight = 0
-"let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-"imap <tab> <c-x><c-u>
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 set completeopt=menuone,menu,longest,preview
 
@@ -76,16 +42,16 @@ endfunction
 
 :map <F2> :exec Dev()<cr> <esc>
 :map <F3> :exec Term()<cr> <esc>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Colemak Mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""
+" Colemak Mappings "
+""""""""""""""""""""
 noremap <esc> <alt>
 noremap n gj
 noremap e gk
 noremap i l
 noremap gn j
 noremap ge k
-
 
 noremap a i
 noremap A I

@@ -1,6 +1,10 @@
-*
-*.swp
-.VimballRecord
-!.vimrc
-!bundle/Vundle.vim
-!colors/
+### Vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+plugged/
+colors/
+.ycm_extra_conf.pyc
