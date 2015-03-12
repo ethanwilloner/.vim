@@ -14,13 +14,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'nicoraffo/conque'
 Plug 'vim-scripts/awk.vim'
-Plug 'Valloric/YouCompleteMe'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh ' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 Plug 'rust-lang/rust.vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'ervandew/supertab'
-Plug 'Rip-Rip/clang_complete'
+"Plug 'ervandew/supertab'
+"Plug 'Rip-Rip/clang_complete'
 call plug#end()
 
 "http://vim.wikia.com/wiki/Configuring_the_cursor
@@ -28,20 +27,20 @@ highlight Cursor guibg=steelblue
 highlight iCursor guibg=steelblue
 highlight iCursor guifg=white guibg=steelblue
 
-
 "clang_complete settings
-let g:clang_use_library=1
-let g:clang_library_path = '/usr/lib/llvm-3.6/lib/'
-let g:clang_auto_select = 1
-let g:clang_complete_auto = 0
-let g:clang_complete_copen = 1
+"let g:clang_use_library=1
+"let g:clang_library_path = '/usr/lib/llvm-3.6/lib/'
+"let g:clang_auto_select = 1
+"let g:clang_complete_auto = 0
+"let g:clang_complete_copen = 1
 "let g:clang_sort_algo = "none"
-set completeopt=menuone,menu,longest,preview
+"set completeopt=menuone,menu,longest,preview
 
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabLongestHighlight = 0
+"let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabLongestHighlight = 0
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf = 0
 
 function Dev()
 	:NERDTree
