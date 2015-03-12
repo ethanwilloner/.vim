@@ -8,19 +8,19 @@ flags = [
     '-Wall',
     '-Wextra',
     '-Werror',
-    '-Wc++98-compat',
     '-Wno-long-long',
     '-Wno-variadic-macros',
     '-fexceptions',
-    '-DNDEBUG',
-    '-DUNIT_TESTS',
     '-std=c11',
+    '-stdlib=c11',
+    '-lpthread',
     '-x', 'c',
-    '-isystem', '/usr/lib/gcc/x86_64-linux-gnu/4.8/include',
     '-I', 'src',
     '-I', 'include',
     '-isystem', '/usr/include',
-    '-isystem', '/usr/local/include'
+    '-isystem', '/usr/local/include',
+    '-isystem', '/usr/lib/clang/3.6/include'
+    '-isystem', '/usr/lib/gcc/x86_64-linux-gnu/4.8/include',
 ]
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
@@ -110,13 +110,6 @@ def FlagsForFile( filename, **kwargs ):
       compilation_info.compiler_flags_,
       compilation_info.compiler_working_dir_ )
 
-    # NOTE: This is just for YouCompleteMe; it's highly likely that your project
-    # does NOT need to remove the stdlib flag. DO NOT USE THIS IN YOUR
-    # ycm_extra_conf IF YOU'RE NOT 100% SURE YOU NEED IT.
-    try:
-      final_flags.remove( '-stdlib=libc++' )
-    except ValueError:
-      pass
   else:
     relative_to = DirectoryOfThisScript()
     final_flags = MakeRelativePathsInFlagsAbsolute( flags, relative_to )
