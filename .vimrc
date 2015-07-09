@@ -27,19 +27,20 @@ highlight iCursor guifg=white guibg=steelblue
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 0
 
+"let mapleader = "\<Space>"
+
 function Dev()
 	:NERDTree
 	:belowright new
 	:ConqueTerm bash
 endfunction
 
-function Term()
-	:belowright new
-	:ConqueTerm bash
+function Tree()
+	:NERDTree
 endfunction
 
 :map <F2> :exec Dev()<cr> <esc>
-:map <F3> :exec Term()<cr> <esc>
+:map <F3> :exec Tree()<cr> <esc>
 
 """"""""""""""""""""
 " Colemak Mappings "
@@ -98,3 +99,4 @@ nnoremap l u
 
 " this nerdtree mapping interferes with movement
 let g:NERDTreeMapOpenExpl = "j"
+
