@@ -1,3 +1,4 @@
+" Standard Vim Settings
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -5,11 +6,16 @@ set expandtab
 syntax on
 colorscheme wombat
 set number
-let g:NERDTreeWinSize = 70
 set nocompatible
 set shell=bash
 set clipboard=unnamedplus
 
+" NERDTree Settings
+let g:NERDTreeWinSize = 40
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Plugins to install through vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -17,19 +23,20 @@ Plug 'nicoraffo/conque'
 Plug 'vim-scripts/awk.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 Plug 'rust-lang/rust.vim'
-Plug 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
 
+" Cursor configuration
 "http://vim.wikia.com/wiki/Configuring_the_cursor
 highlight Cursor guibg=steelblue
 highlight iCursor guibg=steelblue
 highlight iCursor guifg=white guibg=steelblue
 
+" YouCompleteMe Settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 0
 
-"let mapleader = "\<Space>"
-
+" Custom Function Mappings
 function Dev()
 	:NERDTree
 	:belowright new
@@ -43,10 +50,12 @@ endfunction
 :map <F2> :exec Dev()<cr> <esc>
 :map <F3> :exec Tree()<cr> <esc>
 
+"let mapleader = "\<Space>"
+
 """"""""""""""""""""
 " Colemak Mappings "
 """"""""""""""""""""
-noremap <esc> <alt>
+imap <M-Space> <Esc>
 noremap n gj
 noremap e gk
 noremap i l
@@ -100,4 +109,3 @@ nnoremap l u
 
 " this nerdtree mapping interferes with movement
 let g:NERDTreeMapOpenExpl = "j"
-
