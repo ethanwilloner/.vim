@@ -55,12 +55,23 @@ endfunction
 """"""""""""""""""""
 " Colemak Mappings "
 """"""""""""""""""""
+noremap h :
+noremap d <DEL>
+noremap D dd
 imap <M-Space> <Esc>
-noremap n gj
-noremap e gk
-noremap i l
-noremap gn j
-noremap ge k
+
+"noremap e gj
+"noremap i gk
+"noremap i l
+"noremap ge j
+"noremap gi k
+
+noremap n h
+noremap e j
+noremap i k
+noremap o l
+noremap ge j
+noremap gi k
 
 noremap a i
 noremap A I
@@ -68,8 +79,8 @@ noremap s a
 noremap S A
 
 " k/K = last search
-noremap k n
-noremap K N
+"noremap k n
+"noremap K N
 
 " l/L = BOL / EOL | <c-l> = join lines
 noremap l ^
@@ -77,8 +88,8 @@ noremap L $
 noremap <C-l> J
 
 " j/J = end of word
-noremap j e
-noremap J E
+"noremap j e
+"noremap J E
 
 " c-e/c-n/c-m or <cr> = High/Low/Mid
 noremap <c-e> H
@@ -86,26 +97,21 @@ noremap <c-n> L
 noremap <c-m> M
 
 " shift+direction switches split panes
-noremap H <C-W>h
-noremap I <C-W>l
-noremap N <C-W>j
-noremap E <C-W>k
+noremap N <C-W>h
+noremap O <C-W>l
+noremap E <C-W>j
+noremap I <C-W>k
 
 " U = Redo with U
 noremap U <C-r>
 
-noremap o ;
-noremap O :
-
 " _r_ = inneR text objects
-onoremap r i
+"noremap r i
 
 " c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
-nnoremap <c-i> <C-PageDown>
-nnoremap <c-h> <C-PageUp>
-
-nnoremap o :
-nnoremap l u
+nnoremap <c-n> <C-PageDown>
+nnoremap <c-o> <C-PageUp>
 
 " this nerdtree mapping interferes with movement
-let g:NERDTreeMapOpenExpl = "j"
+let g:NERDTreeMapOpenExpl = ";"
+let g:NERDTreeMapOpenSplit = ";"
