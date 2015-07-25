@@ -61,41 +61,33 @@ noremap d <DEL>
 noremap D dd
 imap <M-Space> <Esc>
 
-"noremap e gj
-"noremap i gk
-"noremap i l
-"noremap ge j
-"noremap gi k
-
 noremap n h
 noremap e j
 noremap i k
 noremap o l
-noremap ge j
-noremap gi k
 
+" insert
 noremap a i
+" insert at beginning of line
 noremap A I
+" append
 noremap s a
+" append at end of line
 noremap S A
 
-" k/K = last search
-"noremap k n
-"noremap K N
+" search to next
+noremap <C-k> n
+" search to last
+noremap <C-m> N
 
-" l/L = BOL / EOL | <c-l> = join lines
-noremap l ^
-noremap L $
-noremap <C-l> J
-
-" j/J = end of word
-"noremap j e
-"noremap J E
-
-" c-e/c-n/c-m or <cr> = High/Low/Mid
-noremap <c-e> H
-noremap <c-n> L
-noremap <c-m> M
+" end of word
+noremap <C-i> e
+" end of line
+noremap <C-o> $
+" beginning of word
+noremap <C-e> b
+"beginning of line
+noremap <C-n> 0
 
 " shift+direction switches split panes
 noremap N <C-W>h
@@ -106,12 +98,9 @@ noremap I <C-W>k
 " U = Redo with U
 noremap U <C-r>
 
-" _r_ = inneR text objects
-"noremap r i
-
 " c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
-nnoremap <c-n> <C-PageDown>
-nnoremap <c-o> <C-PageUp>
+nnoremap <C-N> <C-PageDown>
+nnoremap <C-O> <C-PageUp>
 
 " this nerdtree mapping interferes with movement
 let g:NERDTreeMapOpenExpl = ";"
