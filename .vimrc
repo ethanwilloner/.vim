@@ -58,7 +58,7 @@ endfunction
 """"""""""""""""""""
 noremap h :
 noremap d <DEL>
-noremap D dd
+noremap DD dd
 imap <M-Space> <Esc>
 
 noremap n h
