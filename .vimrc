@@ -24,7 +24,8 @@ Plug 'nicoraffo/conque'
 Plug 'vim-scripts/awk.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 Plug 'rust-lang/rust.vim'
-Plug 'phildawes/racer'
+"Plug 'phildawes/racer'
+"Plug 'powerline/powerline'
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
 
