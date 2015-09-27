@@ -30,6 +30,7 @@ Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'rust-lang/rust.vim'
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
 
@@ -42,6 +43,15 @@ highlight iCursor guifg=white guibg=steelblue
 " Airline Settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
+
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " YouCompleteMe Settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
@@ -79,6 +89,11 @@ noremap t v
 noremap <C-k> n
 " search to last
 noremap <C-m> N
+
+" Next Error
+noremap ] :lnext<CR>
+" Previous Error
+noremap [ :lprevious<CR>
 
 " end of word
 noremap I e
