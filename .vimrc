@@ -30,6 +30,7 @@ Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
 Plug 'rust-lang/rust.vim'
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
@@ -56,6 +57,9 @@ let g:syntastic_check_on_wq = 0
 " YouCompleteMe Settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 0
+
+" Force cuda filetype to C to work with clang completion
+autocmd FileType cuda set ft=c
 
 """"""""""""""""""""
 " Colemak Mappings "
@@ -122,3 +126,4 @@ let g:NERDTreeMapOpenSplit = ";"
 
 nmap <F2> :NERDTreeTabsOpen<CR>
 nmap <F3> :TagbarToggle<CR>
+nmap <F4> :YcmCompleter FixIt<CR>
