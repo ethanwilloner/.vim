@@ -12,11 +12,12 @@ set clipboard=unnamedplus
 
 " NERDTree Settings
 let g:NERDTreeWinSize = 40
-"let g:NERDTreeMapOpenInTab='<ENTER>' "This option seems to completely break nerdtree tabs
-" Uncomment for automatic NERDTree initialization when starting Vim
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"autocmd VimEnter * NERDTree
+" For some reason this setting below is broken, will use the default 't' binding for now
+"let g:NERDTreeMapOpenInTab='<Enter>'
+let g:NERDTreeMapOpenInTab='t'
+let g:NERDTreeMapOpenInTabSilent='T'
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$', '\.o$']
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " Plugins to install through vim-plug
 call plug#begin('~/.vim/plugged')
@@ -32,6 +33,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'rust-lang/rust.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
 
@@ -85,9 +87,6 @@ noremap A I
 noremap s a
 " append at end of line
 noremap S A
-
-" Visual mode
-noremap t v
 
 " search to next
 noremap <C-k> n
