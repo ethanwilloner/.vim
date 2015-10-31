@@ -12,7 +12,7 @@ set clipboard=unnamedplus
 
 " NERDTree Settings
 let g:NERDTreeWinSize = 40
-let g:NERDTreeMapOpenInTab='<ENTER>'
+"let g:NERDTreeMapOpenInTab='<ENTER>' "This option seems to completely break nerdtree tabs
 " Uncomment for automatic NERDTree initialization when starting Vim
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -124,6 +124,6 @@ noremap <C-o> <C-PageDown>
 let g:NERDTreeMapOpenExpl = ";"
 let g:NERDTreeMapOpenSplit = ";"
 
-nmap <F2> :NERDTreeTabsOpen<CR>
+nmap <F2> :NERDTreeTabsToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :YcmCompleter FixIt<CR>
