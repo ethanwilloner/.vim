@@ -34,7 +34,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'rust-lang/rust.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
+Plug 'Valloric/MatchTagAlways'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " Cursor configuration
@@ -61,7 +64,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 0
 
 " Force cuda filetype to C to work with clang completion
-autocmd FileType cuda set ft=c
+autocmd FileType cuda set ft=cuda.c
 
 """"""""""""""""""""
 " Colemak Mappings "
@@ -126,3 +129,4 @@ let g:NERDTreeMapOpenSplit = ";"
 nmap <F2> :NERDTreeTabsToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :YcmCompleter FixIt<CR>
+nmap <F5> :%s/\s\+$//<CR>
