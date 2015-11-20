@@ -18,18 +18,10 @@ flags = [
     '-I', '.',
     '-I', 'src',
     '-I', 'include',
-    '-isystem', '/usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9',
-    '-isystem', '/usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/x86_64-linux-gnu/c++/4.9',
-    '-isystem', '/usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/backward',
-    '-isystem', '/usr/local/include',
-    '-isystem', '/usr/lib/llvm-3.6/bin/../lib/clang/3.6.0/include',
-    '-isystem', '/usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/include',
-    '-isystem', '/usr/include/x86_64-linux-gnu',
     '-isystem', '/usr/include',
     '-isystem', '/usr/local/include',
-    '-isystem', '/usr/lib/clang/3.6/include'
-    '-isystem', '/usr/lib/llvm-3.6/lib/clang/3.6.0/include'
-    '-isystem', '/usr/lib/gcc/x86_64-linux-gnu/4.8/include',
+    '-isystem', '/usr/lib/clang/3.7/include',
+    '-isystem', '/usr/include/x86_64-linux-gnu'
 ]
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
