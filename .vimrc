@@ -25,7 +25,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/awk.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'fatih/vim-go'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
@@ -36,8 +37,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
-Plug 'Valloric/MatchTagAlways'
-Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " Cursor configuration
