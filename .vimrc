@@ -35,7 +35,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'rust-lang/rust.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Chiel92/vim-autoformat'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
 
@@ -129,3 +131,4 @@ nmap <F2> :NERDTreeTabsToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :YcmCompleter FixIt<CR>
 nmap <F5> :%s/\s\+$//<CR>
+nmap <F6> :Autoformat<CR>
