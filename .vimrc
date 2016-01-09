@@ -38,6 +38,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Chiel92/vim-autoformat'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'terryma/vim-multiple-cursors'
+"Plug 'tpope/vim-surround'
 Plug 'flazz/vim-colorschemes', { 'do' : 'mkdir ~/.vim/colors; mv colors/* ~/.vim/colors/' }
 call plug#end()
 
@@ -109,7 +110,7 @@ noremap O g_
 " beginning of word
 noremap E b
 "beginning of line
-noremap N _g
+noremap N _
 
 " Page Half Down
 noremap <C-e> <C-d>
@@ -122,6 +123,9 @@ noremap U <C-r>
 " c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
 noremap <C-n> <C-PageUp>
 noremap <C-o> <C-PageDown>
+
+" Remap tab to autocomplete in normal mode
+nnoremap <tab> <NOP>
 
 " this nerdtree mapping interferes with movement
 let g:NERDTreeMapOpenExpl = ";"
