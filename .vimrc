@@ -124,9 +124,6 @@ noremap U <C-r>
 noremap <C-n> <C-PageUp>
 noremap <C-o> <C-PageDown>
 
-" Remap tab to autocomplete in normal mode
-nnoremap <tab> <NOP>
-
 " this nerdtree mapping interferes with movement
 let g:NERDTreeMapOpenExpl = ";"
 let g:NERDTreeMapOpenSplit = ";"
