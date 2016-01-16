@@ -52,6 +52,9 @@ highlight iCursor guifg=white guibg=steelblue
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 
+" Gitgutter Settings
+let g:gitgutter_max_signs = 1500
+
 " Syntastic Settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
